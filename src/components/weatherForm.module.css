@@ -1,0 +1,19 @@
+.container {
+    margin: 10px 0;
+}
+
+.input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 24px;
+    border:1px solid rgb(138, 142, 201);
+    border-radius: 3px;
+    z-index: -10;
+    box-shadow: 12px 10px 15px 13px rgba(0, 0, 0, 0.2);
+}
+.input:focus{ 
+    outline-style: double;
+    outline-offset: -2px;
+    outline-width: 3px; 
+}
