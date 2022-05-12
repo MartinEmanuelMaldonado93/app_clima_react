@@ -1,13 +1,15 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@import url('https://taniarascia.github.io/primitive/css/main.css');
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+
+#formWeather{  
+    margin-top: 20px;
+    background-color: aliceblue;
+    /* width: 50%;  */
+    /* place-items: center; */
+}
+#displayWeather {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
 }
