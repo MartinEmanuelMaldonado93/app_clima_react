@@ -3,6 +3,7 @@ import WeatherForm from './weatherForm';
 import WeatherMainInfo from './weatherMainInfo';
 
 import styles from './weatherApp.module.css';
+import Loading from './loading';
 
 
 export default function WeatherApp() {
@@ -21,7 +22,9 @@ export default function WeatherApp() {
             const request = await fetch(`http://api.weatherapi.com/v1/current.json?key=ca8d2053a96e4faba33100829221205&q=${city}&aqi=no`);
 
             const json = await request.json();
+             
             setWeather(json);
+
         } catch (error) {
             
         }
@@ -33,7 +36,10 @@ export default function WeatherApp() {
     return (
     <div className = {styles.weatherContainer}> 
         <WeatherForm  onChangeCity={handleChangeCity}/>
-        <WeatherMainInfo weather={weather}/>
+        {   weather ? 
+            <WeatherMainInfo weather={weather}/>
+            :<Loading/>}
+        
     </div>
     );
 }
